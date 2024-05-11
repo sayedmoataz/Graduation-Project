@@ -1,6 +1,6 @@
-// ignore_for_file: avoid_print, library_private_types_in_public_api
 
-import 'package:flutter/material.dart';
+
+import 'dart:developer';
 import 'package:flutter_unity/flutter_unity.dart';
 
 class UnityViewPage extends StatefulWidget {
@@ -38,7 +38,7 @@ class _UnityViewPageState extends State<UnityViewPage> {
   }
 
   void onUnityViewCreated(UnityViewController? controller) {
-    print('onUnityViewCreated');
+    log('onUnityViewCreated');
 
     unityViewController = controller;
 
@@ -50,13 +50,13 @@ class _UnityViewPageState extends State<UnityViewPage> {
   }
 
   void onUnityViewReattached(UnityViewController controller) {
-    print('onUnityViewReattached');
+    log('onUnityViewReattached');
   }
 
   void onUnityViewMessage(UnityViewController controller, String? message) {
     print('onUnityViewMessage');
 
-    print(message);
+    log(message);
   }
 
 }
